@@ -1,0 +1,5 @@
+Creating account, posts, like_posts tables took 0.005 minutes
+Sync inserting 100 000 rows into account table took 0.199 minutes
+Sync inserting 1 000 000 rows into posts table took 2.211 minutes
+Sync inserting 10 000 000 rows into like_posts table took 20.694 minutes
+Sync inserting data into account, posts, like_posts tables took 23.111 minutes

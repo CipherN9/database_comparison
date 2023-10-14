@@ -54,6 +54,7 @@ def generate_random_like(accounts_ids_array: list, posts_ids_array: list):
 
     return random_account_id, random_post_id
 
+
 def generate_data(accounts_num, posts_num, like_post_num):
     account = {"id": [], "username": [], "birthday": []}
     post = {"id": [], "account_id": [], "created_on": [], "content": []}
@@ -61,8 +62,6 @@ def generate_data(accounts_num, posts_num, like_post_num):
 
     account_ids = []
     post_ids = []
-
-    n = 10
 
     for id_ in range(accounts_num):
         username, birthday = generate_random_user()
@@ -92,11 +91,10 @@ if __name__ == "__main__":
     accounts_number = 100000
     posts_number = 1000000
     likes_number = 10000000
-    account, post, like_post = generate_data(accounts_number, posts_number, likes_number)
+    generated_account, generated_post, generated_like_post = generate_data(accounts_number, posts_number, likes_number)
     with open("static/account.json", "w") as f:
-        json.dump(account, f)
+        json.dump(generated_account, f)
     with open("static/post.json", "w") as f:
-        json.dump(post, f)
+        json.dump(generated_post, f)
     with open("static/like_post.json", "w") as f:
-        json.dump(like_post, f)
-
+        json.dump(generated_like_post, f)
